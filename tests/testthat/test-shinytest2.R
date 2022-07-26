@@ -1,5 +1,5 @@
 library(shinytest2)
-# 
+
 # test_that("{shinytest2} recording: test1", {
 #   app <- AppDriver$new(name = "test1", height = 606, width = 871, variant= platform_variant())
 #   withr::defer({app$stop()})
@@ -8,24 +8,36 @@ library(shinytest2)
 #   app$click("submit")
 #   app$expect_values(output = "plt")
 # })
-# 
-# 
-# test_that("{shinytest2} recording: learn_shinytest2", {
-#   app <- AppDriver$new(name = "learn_shinytest2", height = 648, width = 1011, variant= platform_variant())
-#   withr::defer({app$stop()})
-#   app$set_inputs(end_date = "2018-05-18", api = "Keytruda")
-#   app$click("submit")
-#   app$expect_values()
-#   app$expect_values(output = "tble")
-# })
-# 
-# 
-# test_that("{shinytest2} recording: test2", {
-#   app <- AppDriver$new(name = "test2", height = 648, width = 1011, variant= platform_variant())
-#   withr::defer({app$stop()})
-#   app$set_inputs(end_date = "2018-05-18", api = "Keytruda")
-#   app$click("submit")
-#   app$wait_for_idle()
-#   app$expect_values()
-#   app$expect_values(output = "tble")
-# })
+
+
+test_that("{shinytest2} recording: learn_shinytest2", {
+  app <- AppDriver$new(name = "learn_shinytest2", height = 648, width = 1011, variant= platform_variant())
+  withr::defer({app$stop()})
+  app$set_inputs(end_date = "2018-05-18", api = "Keytruda")
+  app$click("submit")
+  app$expect_values()
+  app$expect_values(output = "tble")
+})
+
+
+test_that("{shinytest2} recording: test2", {
+  app <- AppDriver$new(name = "test2", height = 648, width = 1011, variant= platform_variant())
+  withr::defer({app$stop()})
+  app$set_inputs(end_date = "2018-05-18", api = "Keytruda")
+  app$click("submit")
+  app$wait_for_idle()
+  app$expect_values()
+  app$expect_values(output = "tble")
+})
+
+
+test_that("{shinytest2} recording: learn_shinytest2", {
+  app <- AppDriver$new(name = "learn_shinytest2", height = 1005, width = 1531)
+  app$set_inputs(api = "")
+  app$set_inputs(api = "lipp")
+  app$set_inputs(api = "lip")
+  app$set_inputs(api = "lipi")
+  app$set_inputs(api = "lipitor")
+  app$click("submit")
+  app$expect_values()
+})
