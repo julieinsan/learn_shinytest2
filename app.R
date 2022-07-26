@@ -7,6 +7,7 @@ ui<- fluidPage(
   fluidRow(
     column(3,
            br(),
+           h2("By Julie I Santos, PhD"), 
            p("The OpenFDA project makes adverse-event data gathered after January 1, 2004,
               available via a public-access portal that enables developers to quickly and
               easily use it in applications. The project is hosted at:"),
